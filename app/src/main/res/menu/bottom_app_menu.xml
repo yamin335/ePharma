@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/customers_nav"
+        android:title="@string/customers"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_outline_groups_24" />
+    <item
+        android:id="@+id/products_nav"
+        android:title="Products"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_outline_feed_24"/>
+    <item
+        android:id="@+id/mpos_nav"
+        android:title="Orders"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_shopping_cart_checkout_24"
+        />
+    <item
+        android:id="@+id/attendance_nav"
+        android:title="Attendance"
+        android:icon="@drawable/ic_outline_fact_check_24"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/more_nav"
+        android:title="@string/more"
+        android:icon="@drawable/ic_outline_border_all_24"
+        app:showAsAction="always"/>
+</menu>

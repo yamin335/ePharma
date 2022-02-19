@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="GiftPointHistoryDetailsListItemBinding">
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="description"
+            type="String" />
+        <variable
+            name="point"
+            type="String" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools">
+        <RelativeLayout
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/giftPoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp">
+                <TextView
+                    android:text="@{title}"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Reason for getting point"/>
+                <TextView
+                    android:text="@{description}"
+                    android:textSize="12sp"
+                    android:textColor="#808080"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Simple description for getting point"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/giftPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:text="@{point}"
+                android:textColor="@color/colorPrimary"
+                tools:text="50" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:background="?android:attr/listDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="17dp"/>
+    </LinearLayout>
+</layout>

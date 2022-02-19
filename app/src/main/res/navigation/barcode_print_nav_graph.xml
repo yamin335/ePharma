@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/barcode_print_nav"
+    app:startDestination="@id/printBarcodeFragment">
+
+    <fragment
+        android:id="@+id/printBarcodeFragment"
+        android:name="com.rtchubs.pharmaerp.ui.barcode_print.PrintBarcodeFragment"
+        android:label="Print Barcodes"
+        tools:layout="@layout/fragment_print_barcode">
+        <argument
+            android:name="downloadUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>

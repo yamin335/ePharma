@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="StockProductDetailsListItemBinding">
+        <variable
+            name="barcode"
+            type="String" />
+        <variable
+            name="buyingPrice"
+            type="String" />
+        <variable
+            name="sellingPrice"
+            type="String" />
+    </data>
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:rippleColor="@color/transparent"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="8dp"
+        app:strokeColor="#F2F7FF"
+        app:strokeWidth="0.5dp"
+        app:contentPadding="16dp"
+        app:cardUseCompatPadding="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Barcode:"
+                    android:textColor="@color/textColorNormal"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@{barcode}"
+                    android:textColor="@color/textColorNormal"
+                    tools:text="9687383483393"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Buying Price:"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@{buyingPrice}"
+                    tools:text="20"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Selling Price:"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@{sellingPrice}"
+                    tools:text="20"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChange"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Change"
+                app:icon="@drawable/ic_outline_mode_edit_outline_24"
+                app:iconGravity="textStart"
+                app:iconTint="@color/grayColor"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:layout_marginTop="10dp"
+                android:textSize="13sp"
+                app:rippleColor="@color/icPressed"
+                android:textColor="@color/grayColor"
+                android:windowSoftInputMode="adjustResize"
+                android:textAllCaps="false"
+                app:cornerRadius="20dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/more_nav"
+    app:startDestination="@id/moreFragment">
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.rtchubs.pharmaerp.ui.more.MoreFragment"
+        android:label="More"
+        tools:layout="@layout/fragment_more" >
+        <action
+            android:id="@+id/action_moreFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_profilesFragment"
+            app:destination="@id/profilesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_myDevicesFragment"
+            app:destination="@id/myDevicesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_myAccountsFragment"
+            app:destination="@id/myAccountsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_offers_nav"
+            app:destination="@id/offers_nav"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_order_nav"
+            app:destination="@id/order_nav"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_giftPointHistoryFragment"
+            app:destination="@id/giftPointHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_stockProductsFragment"
+            app:destination="@id/stockProductsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreFragment_to_productPurchaseFragment"
+            app:destination="@id/productPurchaseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <include app:graph="@navigation/drawer_nav_graph" />
+    <fragment
+        android:id="@+id/myAccountsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.myAccount.MyAccountsFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_my_accounts"/>
+    <fragment
+        android:id="@+id/myDevicesFragment"
+        android:name="com.rtchubs.pharmaerp.ui.myDevices.MyDevicesFragment"
+        android:label="My Devices"
+        tools:layout="@layout/fragment_my_devices"/>
+    <fragment
+        android:id="@+id/profilesFragment"
+        android:name="com.rtchubs.pharmaerp.ui.profiles.ProfilesFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profiles"/>
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.transactions.TransactionsFragment"
+        android:label="Transactions"
+        tools:layout="@layout/fragment_transactions">
+        <action
+            android:id="@+id/action_transactionsFragment_to_transactionDetailsFragment"
+            app:destination="@id/transactionDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/transactionDetailsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.transactions.TransactionDetailsFragment"
+        android:label="Transaction Details"
+        tools:layout="@layout/fragment_transaction_details">
+        <argument
+            android:name="order"
+            app:argType="com.rtchubs.pharmaerp.models.order.SalesData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/giftPointHistoryFragment"
+        android:name="com.rtchubs.pharmaerp.ui.gift_point.GiftPointHistoryFragment"
+        android:label="Gift Point History"
+        tools:layout="@layout/fragment_gift_point_history">
+        <action
+            android:id="@+id/action_giftPointHistoryFragment_to_giftPointHistoryDetailsFragment"
+            app:destination="@id/giftPointHistoryDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/giftPointHistoryDetailsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.gift_point.GiftPointHistoryDetailsFragment"
+        android:label="Points details"
+        tools:layout="@layout/fragment_gift_point_history_details">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="merchantId"
+            app:argType="integer" />
+    </fragment>
+
+    <include app:graph="@navigation/offers_nav_graph" />
+    <include app:graph="@navigation/order_nav_graph" />
+    <fragment
+        android:id="@+id/stockProductsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.stock_product.StockProductsFragment"
+        android:label="Stock Products"
+        tools:layout="@layout/fragment_stock_products">
+        <action
+            android:id="@+id/action_stockProductsFragment_to_stockProductsDetailsFragment"
+            app:destination="@id/stockProductsDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_stockProductsFragment_to_receive_product_nav"
+            app:destination="@id/receive_product_nav"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="product"
+                app:argType="com.rtchubs.pharmaerp.models.Product"
+                app:nullable="true"
+                android:defaultValue="@null" />
+            <argument
+                android:name="isEdit"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <argument
+                android:name="purchase"
+                app:argType="com.rtchubs.pharmaerp.models.purchase_list.PurchaseListResponseData"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/stockProductsDetailsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.stock_product.StockProductsDetailsFragment"
+        android:label="Stock Details"
+        tools:layout="@layout/fragment_stock_products_details">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="productDetailId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_stockProductsDetailsFragment_to_barcode_print_nav"
+            app:destination="@id/barcode_print_nav"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="downloadUrl"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/productPurchaseFragment"
+        android:name="com.rtchubs.pharmaerp.ui.purchase_list.ProductPurchaseFragment"
+        android:label="Products Purchase List"
+        tools:layout="@layout/fragment_purchase_list">
+        <action
+            android:id="@+id/action_productPurchaseFragment_to_receive_product_nav"
+            app:destination="@id/receive_product_nav"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="product"
+                app:argType="com.rtchubs.pharmaerp.models.Product"
+                app:nullable="true"
+                android:defaultValue="@null" />
+            <argument
+                android:name="isEdit"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <argument
+                android:name="purchase"
+                app:argType="com.rtchubs.pharmaerp.models.purchase_list.PurchaseListResponseData"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <include app:graph="@navigation/receive_product_nav_graph" />
+    <include app:graph="@navigation/barcode_print_nav_graph" />
+</navigation>

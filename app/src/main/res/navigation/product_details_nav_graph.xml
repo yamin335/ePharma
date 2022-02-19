@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_details_nav_graph"
+    app:startDestination="@id/productDetailsFragment">
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.home.ProductDetailsFragment"
+        android:label="ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="product"
+            app:argType="com.rtchubs.pharmaerp.models.Product" />
+        <argument
+            android:name="discount"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

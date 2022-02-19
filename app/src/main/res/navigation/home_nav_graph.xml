@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    tools:ignore="InvalidNavigation"
+    app:startDestination="@id/home2Fragment">
+    <fragment
+        tools:layout="@layout/fragment_main2"
+        android:id="@+id/home2Fragment"
+        android:name="com.rtchubs.pharmaerp.ui.home.Home2Fragment"
+        android:label="QPay" >
+
+        <action
+            android:id="@+id/action_home2Fragment_to_exams_nav_graph"
+            app:destination="@id/exams_nav_graph"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_home2Fragment_to_moreShoppingMallFragment"
+            app:destination="@id/moreShoppingMallFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_home2Fragment_to_allShopListFragment"
+            app:destination="@id/allShopListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_home2Fragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/moreShoppingMallFragment"
+        android:name="com.rtchubs.pharmaerp.ui.home.MoreShoppingMallFragment"
+        android:label="Shopping Malls" >
+        <action
+            android:id="@+id/action_moreShoppingMallFragment_to_allShopListFragment"
+            app:destination="@id/allShopListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_moreShoppingMallFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/allShopListFragment"
+        android:name="com.rtchubs.pharmaerp.ui.home.AllShopListFragment"
+        android:label="Shops" >
+        <argument
+            android:name="shoppingMall"
+            app:argType="com.rtchubs.pharmaerp.models.ShoppingMall" />
+        <action
+            android:id="@+id/action_allShopListFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_allShopListFragment_to_shopDetailsFragment"
+            app:destination="@id/shopDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.rtchubs.pharmaerp.ui.home.ProductListFragment"
+        android:label="Products" >
+        <argument
+            android:name="merchant"
+            app:argType="com.rtchubs.pharmaerp.models.Merchant" />
+        <action
+            android:id="@+id/action_productListFragment_to_product_details_nav_graph"
+            app:destination="@id/product_details_nav_graph"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="product"
+                app:argType="com.rtchubs.pharmaerp.models.Product" />
+        </action>
+        <action
+            android:id="@+id/action_productListFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <include app:graph="@navigation/product_details_nav_graph" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.rtchubs.pharmaerp.ui.cart.CartFragment"
+        android:label="Cart" />
+    <fragment
+        android:id="@+id/shopDetailsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.shops.ShopDetailsFragment"
+        android:label="ShopDetailsFragment" >
+        <argument
+            android:name="merchant"
+            app:argType="com.rtchubs.pharmaerp.models.Merchant" />
+        <action
+            android:id="@+id/action_shopDetailsFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_shopDetailsFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_shopDetailsFragment_to_ARLocationFragment"
+            app:destination="@id/ARLocationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_shopDetailsFragment_to_product_details_nav_graph"
+            app:destination="@id/product_details_nav_graph"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="product"
+                app:argType="com.rtchubs.pharmaerp.models.Product" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/ARLocationFragment"
+        android:name="com.rtchubs.pharmaerp.ar_location.ARLocationFragment"
+        android:label="ARLocationFragment" >
+        <argument
+            android:name="location"
+            app:argType="com.rtchubs.pharmaerp.models.LocationData" />
+    </fragment>
+</navigation>

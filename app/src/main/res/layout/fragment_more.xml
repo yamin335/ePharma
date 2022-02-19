@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="MoreFragmentBinding">
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/themeBackgroundColor"
+        tools:context=".ui.more.MoreFragment">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/themeColor"
+            app:contentInsetStart="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/appLogo"
+                    android:layout_width="130dp"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginStart="8dp"
+                    android:padding="4dp"
+                    android:src="@drawable/derma_health_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rivProfileImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:elevation="10dp"
+                        android:src="@drawable/icons8_demo_account_100" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@id/rivProfileImage"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Jahangir Alam"
+                            android:textColor="#555555"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEmployeeID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:text="SHA-1234"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    android:background="#FDB40B">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/upgrade"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Current Subscription"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="Initial Package (January, 2021)"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/upgrade"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Upgrade"
+                        app:rippleColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/white"
+                        android:windowSoftInputMode="adjustResize"
+                        android:textAllCaps="false"
+                        android:layout_margin="16dp"
+                        app:strokeColor="@color/themeColor"
+                        android:backgroundTint="#B1B2B1"
+                        app:cornerRadius="20dp"/>
+                </RelativeLayout>
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuMyDevices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/icProfile"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            app:srcCompat="@drawable/icons8_light_on_100"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="My Devices"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/icProfile"
+                            android:layout_toStartOf="@id/arrow1"/>
+
+                        <ImageView
+                            android:id="@+id/arrow1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuMyAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="8dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/icPayment"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            app:srcCompat="@drawable/icons8_my_account_100"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="My Account"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/icPayment"
+                            android:layout_toStartOf="@id/arrow3"/>
+                        <ImageView
+                            android:id="@+id/arrow3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuProfiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icTransaction"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/icons8_test_account_100" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/arrow0"
+                            android:layout_toEndOf="@id/icTransaction"
+                            android:gravity="center_vertical"
+                            android:text="Profile"
+                            android:textSize="18sp" />
+                        <ImageView
+                            android:id="@+id/arrow0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuGiftPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="12dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icCoin"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            app:srcCompat="@drawable/icons8_coin_earn_point_100" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/arrow13"
+                            android:layout_toEndOf="@id/icCoin"
+                            android:gravity="center_vertical"
+                            android:text="Gift Point Rewards"
+                            android:textSize="18sp" />
+                        <ImageView
+                            android:id="@+id/arrow13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="12dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icOffers"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/icons8_offers_100" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/arrow10"
+                            android:layout_toEndOf="@id/icOffers"
+                            android:gravity="center_vertical"
+                            android:text="Offers"
+                            android:textSize="18sp" />
+                        <ImageView
+                            android:id="@+id/arrow10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuPurchaseList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icPurchaseList"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/icons8_purchase_order_100" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/arrow12"
+                            android:layout_toEndOf="@id/icPurchaseList"
+                            android:gravity="center_vertical"
+                            android:text="Purchase List"
+                            android:textSize="18sp" />
+                        <ImageView
+                            android:id="@+id/arrow12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuProductStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    android:visibility="gone"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icProductStock"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/icons8_inventory_100" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/arrow14"
+                            android:layout_toEndOf="@id/icProductStock"
+                            android:gravity="center_vertical"
+                            android:text="Product Stock"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/arrow14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            app:tint="@color/grayColor" />
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icOrders"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/icons8_purchase_order_100" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/arrow11"
+                            android:layout_toEndOf="@id/icOrders"
+                            android:gravity="center_vertical"
+                            android:text="Online Orders"
+                            android:textSize="18sp" />
+                        <ImageView
+                            android:id="@+id/arrow11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuTransactions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    android:visibility="gone"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icNotice"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:padding="1dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            app:srcCompat="@drawable/icons8_ledger_100" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transactions"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/icNotice"
+                            android:layout_toStartOf="@id/arrow4"/>
+                        <ImageView
+                            android:id="@+id/arrow4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/menuSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingRight="10dp"
+                    app:contentPaddingTop="8dp"
+                    app:contentPaddingBottom="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/icOffer"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            app:srcCompat="@drawable/icons8_settings_100"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Settings"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/icOffer"
+                            android:layout_toStartOf="@id/arrow5"/>
+                        <ImageView
+                            android:id="@+id/arrow5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/grayColor"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                    </RelativeLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+                <View
+                    android:background="?android:attr/listDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginStart="56dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="48dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSignOut"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Sign Out"
+                        android:layout_marginEnd="24dp"
+                        app:rippleColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textColor="@color/grayColor"
+                        android:windowSoftInputMode="adjustResize"
+                        android:textAllCaps="false"
+                        android:backgroundTint="#f2f2f2"
+                        app:cornerRadius="20dp"/>
+
+                    <TextView
+                        android:id="@+id/version"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/grayColor"
+                        tools:text="Version 1.0.0"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

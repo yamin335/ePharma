@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customers_nav"
+    app:startDestination="@id/allCustomersFragment">
+
+    <fragment
+        android:id="@+id/allCustomersFragment"
+        android:name="com.rtchubs.pharmaerp.ui.customers.AllCustomersFragment"
+        tools:layout="@layout/fragment_all_customers" >
+        <action
+            android:id="@+id/action_allCustomersFragment_to_addCustomerFragment"
+            app:destination="@id/addCustomerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addCustomerFragment"
+        android:name="com.rtchubs.pharmaerp.ui.customers.AddCustomerFragment"
+        android:label="Add New Customer"
+        tools:layout="@layout/fragment_add_customer">
+        <argument
+            android:name="isDetails"
+            app:argType="boolean" />
+        <argument
+            android:name="customer"
+            app:argType="com.rtchubs.pharmaerp.models.customers.Customer"
+            app:nullable="true" />
+    </fragment>
+</navigation>

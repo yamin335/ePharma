@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/receive_product_nav"
+    app:startDestination="@id/receiveProductFragment">
+    <include app:graph="@navigation/select_product_nav_graph" />
+    <fragment
+        android:id="@+id/receiveProductFragment"
+        android:name="com.rtchubs.pharmaerp.ui.stock_product.ReceiveProductFragment"
+        android:label="Receive Product"
+        tools:layout="@layout/fragment_receive_product">
+        <argument
+            android:name="product"
+            app:argType="com.rtchubs.pharmaerp.models.Product"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="isEdit"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="purchase"
+            app:argType="com.rtchubs.pharmaerp.models.purchase_list.PurchaseListResponseData"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_receiveProductFragment_to_select_product_nav_graph"
+            app:destination="@id/select_product_nav_graph"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mpos_nav"
+    app:startDestination="@id/MPOSFragment">
+
+    <fragment
+        android:id="@+id/MPOSFragment"
+        android:name="com.rtchubs.pharmaerp.ui.mpos.MPOSFragment"
+        android:label="MPOSFragment"
+        tools:layout="@layout/fragment_mpos">
+        <action
+            android:id="@+id/action_MPOSFragment_to_createMPOSOrderFragment"
+            app:destination="@id/createMPOSOrderFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_MPOSFragment_to_MPOSOrderDetailsFragment"
+            app:destination="@id/MPOSOrderDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/createMPOSOrderFragment"
+        android:name="com.rtchubs.pharmaerp.ui.mpos.CreateMPOSOrderFragment"
+        android:label="New Order"
+        tools:layout="@layout/fragment_create_mpos_order">
+        <action
+            android:id="@+id/action_createMPOSOrderFragment_to_select_customer_nav_graph"
+            app:destination="@id/select_customer_nav_graph"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_createMPOSOrderFragment_to_select_product_nav_graph"
+            app:destination="@id/select_product_nav_graph"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <include app:graph="@navigation/select_customer_nav_graph" />
+    <include app:graph="@navigation/select_product_nav_graph" />
+    <fragment
+        android:id="@+id/MPOSOrderDetailsFragment"
+        android:name="com.rtchubs.pharmaerp.ui.mpos.MPOSOrderDetailsFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_mpos_order_details">
+        <argument
+            android:name="order"
+            app:argType="com.rtchubs.pharmaerp.models.order.SalesData" />
+    </fragment>
+</navigation>
