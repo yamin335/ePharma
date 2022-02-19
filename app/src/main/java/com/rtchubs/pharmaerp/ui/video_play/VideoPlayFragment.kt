@@ -36,7 +36,7 @@ class VideoPlayFragment : BaseFragment<FragmentVideoPlayBinding, VideoPlayViewMo
         )
 
         val uriRawRes: Uri = Uri.parse(
-            "android.resource://" + requireContext().packageName + "/" + R.raw.math_video
+            "android.resource://" + requireContext().packageName + "/" //+ R.raw.math_video
         )
         //simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.fishvideo))
 
