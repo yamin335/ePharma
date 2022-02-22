@@ -100,10 +100,10 @@ class AttendanceFragment : BaseFragment<AttendanceFragmentBinding, AttendanceVie
             override fun onReceive(context: Context?, intent: Intent?) {
                 val location = intent?.getParcelableExtra<Location>(EXTRA_LOCATION_UPDATE)
                 if (location != null) {
-                    Toast.makeText(
-                        context, "Current Location(${location.latitude}, ${location.longitude})",
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    Toast.makeText(
+//                        context, "Current Location(${location.latitude}, ${location.longitude})",
+//                        Toast.LENGTH_SHORT
+//                    ).show()
                 }
             }
         }

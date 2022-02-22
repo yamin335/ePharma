@@ -133,30 +133,30 @@
                         tools:text="Customer Address"/>
                 </LinearLayout>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardSpinnerVatTax"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:visibility="gone"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    app:cardUseCompatPadding="false"
-                    app:strokeColor="@color/albumFontHint"
-                    app:strokeWidth="0.8dp">
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/cardSpinnerVatTax"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardElevation="0dp"-->
+<!--                    app:cardUseCompatPadding="false"-->
+<!--                    app:strokeColor="@color/albumFontHint"-->
+<!--                    app:strokeWidth="0.8dp">-->
 
-                    <Spinner
-                        android:id="@+id/spinnerVatTax"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:layout_marginStart="16dp" />
+<!--                    <Spinner-->
+<!--                        android:id="@+id/spinnerVatTax"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:layout_marginStart="16dp" />-->
 
-                </com.google.android.material.card.MaterialCardView>
+<!--                </com.google.android.material.card.MaterialCardView>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"

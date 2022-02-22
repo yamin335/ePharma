@@ -85,7 +85,7 @@ class AttendanceLocationUpdatesService : DaggerService() {
     private var mLocation: Location? = null
 
     private val locationText: String get() {
-        return "Current Location(${mLocation?.latitude}, ${mLocation?.longitude})"
+        return "You are now checked in"
     }
 
     private val notificationTitle: String get() {

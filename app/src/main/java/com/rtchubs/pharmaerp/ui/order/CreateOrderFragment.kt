@@ -31,11 +31,11 @@ class CreateOrderFragment : BaseFragment<CreateOrderFragmentBinding, CreateOrder
 
     lateinit var orderProductListAdapter: OrderProductListAdapter
 
-    var taxType = ""
-
-    var taxTypeValues = arrayOf("", "inclusive", "exclusive")
-
-    var taxTypes = arrayOf("VAT/TAX Type", "VAT/TAX Inclusive", "VAT/TAX Exclusive")
+//    var taxType = ""
+//
+//    var taxTypeValues = arrayOf("", "inclusive", "exclusive")
+//
+//    var taxTypes = arrayOf("VAT/TAX Type", "VAT/TAX Inclusive", "VAT/TAX Exclusive")
 
     var total = 0.0
 
@@ -102,34 +102,34 @@ class CreateOrderFragment : BaseFragment<CreateOrderFragmentBinding, CreateOrder
             }
         })
 
-        val categoryAdapter = ArrayAdapter(requireContext(), R.layout.spinner_item, taxTypes)
-        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        viewDataBinding.spinnerVatTax.adapter = categoryAdapter
-
-        viewDataBinding.spinnerVatTax.onItemSelectedListener =
-            object : AdapterView.OnItemClickListener,
-            AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                taxType = taxTypeValues[position]
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-            }
-
-            override fun onItemClick(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-
-            }
-        }
+//        val categoryAdapter = ArrayAdapter(requireContext(), R.layout.spinner_item, taxTypes)
+//        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+//        viewDataBinding.spinnerVatTax.adapter = categoryAdapter
+//
+//        viewDataBinding.spinnerVatTax.onItemSelectedListener =
+//            object : AdapterView.OnItemClickListener,
+//            AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(
+//                parent: AdapterView<*>?,
+//                view: View?,
+//                position: Int,
+//                id: Long
+//            ) {
+//                taxType = taxTypeValues[position]
+//            }
+//
+//            override fun onNothingSelected(parent: AdapterView<*>?) {
+//            }
+//
+//            override fun onItemClick(
+//                parent: AdapterView<*>?,
+//                view: View?,
+//                position: Int,
+//                id: Long
+//            ) {
+//
+//            }
+//        }
 
         viewModel.orderPlaceResponse.observe(viewLifecycleOwner, androidx.lifecycle.Observer { response ->
             response?.let {
