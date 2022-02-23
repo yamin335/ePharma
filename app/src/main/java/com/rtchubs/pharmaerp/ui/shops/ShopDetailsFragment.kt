@@ -124,13 +124,13 @@ class ShopDetailsFragment :
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             viewDataBinding.openArLocation.visibility = View.VISIBLE
             viewDataBinding.openArLocation.setOnClickListener {
-                val merchant = args.merchant
-                val lat = merchant.lat ?: return@setOnClickListener
-                val long = merchant.long ?: return@setOnClickListener
-                val shopName = merchant.name ?: "Unknown Place"
-                navController.navigate(ShopDetailsFragmentDirections.actionShopDetailsFragmentToARLocationFragment(
-                    LocationData(shopName, lat, long)
-                ))
+//                val merchant = args.merchant
+//                val lat = merchant.lat ?: return@setOnClickListener
+//                val long = merchant.long ?: return@setOnClickListener
+//                val shopName = merchant.name ?: "Unknown Place"
+//                navController.navigate(ShopDetailsFragmentDirections.actionShopDetailsFragmentToARLocationFragment(
+//                    LocationData(shopName, lat, long)
+//                ))
             }
         } else {
             viewDataBinding.openArLocation.visibility = View.GONE

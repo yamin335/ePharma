@@ -133,13 +133,6 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
-        <action
-            android:id="@+id/action_shopDetailsFragment_to_ARLocationFragment"
-            app:destination="@id/ARLocationFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_shopDetailsFragment_to_product_details_nav_graph"
@@ -152,13 +145,5 @@
                 android:name="product"
                 app:argType="com.rtchubs.pharmaerp.models.Product" />
         </action>
-    </fragment>
-    <fragment
-        android:id="@+id/ARLocationFragment"
-        android:name="com.rtchubs.pharmaerp.ar_location.ARLocationFragment"
-        android:label="ARLocationFragment" >
-        <argument
-            android:name="location"
-            app:argType="com.rtchubs.pharmaerp.models.LocationData" />
     </fragment>
 </navigation>

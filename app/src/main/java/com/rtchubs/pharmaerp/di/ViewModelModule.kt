@@ -3,7 +3,6 @@ package com.rtchubs.pharmaerp.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.rtchubs.pharmaerp.ViewModelFactory
-import com.rtchubs.pharmaerp.ar_location.ARLocationViewModel
 import com.rtchubs.pharmaerp.nid_scan.NIDScanCameraXViewModel
 import com.rtchubs.pharmaerp.ui.LoginActivityViewModel
 import com.rtchubs.pharmaerp.ui.MainActivityViewModel
@@ -29,17 +28,6 @@ import com.rtchubs.pharmaerp.ui.how_works.HowWorksViewModel
 import com.rtchubs.pharmaerp.ui.info.InfoViewModel
 import com.rtchubs.pharmaerp.ui.live_chat.LiveChatViewModel
 import com.rtchubs.pharmaerp.ui.login.SignInViewModel
-import com.rtchubs.pharmaerp.ui.tou.TouViewModel
-import com.rtchubs.pharmaerp.ui.otp.OtpViewModel
-import com.rtchubs.pharmaerp.ui.pre_on_boarding.PreOnBoardingViewModel
-import com.rtchubs.pharmaerp.ui.profiles.ProfilesViewModel
-import com.rtchubs.pharmaerp.ui.registration.RegistrationViewModel
-import com.rtchubs.pharmaerp.ui.settings.SettingsViewModel
-import com.rtchubs.pharmaerp.ui.setup.SetupViewModel
-import com.rtchubs.pharmaerp.ui.setup_complete.SetupCompleteViewModel
-import com.rtchubs.pharmaerp.ui.splash.SplashViewModel
-import com.rtchubs.pharmaerp.ui.video_play.LoadWebViewViewModel
-import com.rtchubs.pharmaerp.ui.video_play.VideoPlayViewModel
 import com.rtchubs.pharmaerp.ui.login.ViewPagerViewModel
 import com.rtchubs.pharmaerp.ui.more.MoreViewModel
 import com.rtchubs.pharmaerp.ui.mpos.CreateMPOSOrderViewModel
@@ -52,13 +40,21 @@ import com.rtchubs.pharmaerp.ui.offers.OffersViewModel
 import com.rtchubs.pharmaerp.ui.order.CreateOrderViewModel
 import com.rtchubs.pharmaerp.ui.order.OrderTrackHistoryViewModel
 import com.rtchubs.pharmaerp.ui.order.OrderViewModel
+import com.rtchubs.pharmaerp.ui.otp.OtpViewModel
 import com.rtchubs.pharmaerp.ui.otp_signin.OtpSignInViewModel
 import com.rtchubs.pharmaerp.ui.pin_number.PinNumberViewModel
+import com.rtchubs.pharmaerp.ui.pre_on_boarding.PreOnBoardingViewModel
 import com.rtchubs.pharmaerp.ui.products.SelectProductViewModel
 import com.rtchubs.pharmaerp.ui.profile_signin.ProfileSignInViewModel
+import com.rtchubs.pharmaerp.ui.profiles.ProfilesViewModel
 import com.rtchubs.pharmaerp.ui.purchase_list.PurchaseListFragmentViewModel
+import com.rtchubs.pharmaerp.ui.registration.RegistrationViewModel
+import com.rtchubs.pharmaerp.ui.settings.SettingsViewModel
+import com.rtchubs.pharmaerp.ui.setup.SetupViewModel
+import com.rtchubs.pharmaerp.ui.setup_complete.SetupCompleteViewModel
 import com.rtchubs.pharmaerp.ui.shops.ShopDetailsContactUsViewModel
 import com.rtchubs.pharmaerp.ui.shops.ShopDetailsViewModel
+import com.rtchubs.pharmaerp.ui.splash.SplashViewModel
 import com.rtchubs.pharmaerp.ui.stock_product.ReceiveProductViewModel
 import com.rtchubs.pharmaerp.ui.stock_product.StockProductDetailsViewModel
 import com.rtchubs.pharmaerp.ui.stock_product.StockProductsViewModel
@@ -67,8 +63,11 @@ import com.rtchubs.pharmaerp.ui.topup.TopUpAmountViewModel
 import com.rtchubs.pharmaerp.ui.topup.TopUpBankCardViewModel
 import com.rtchubs.pharmaerp.ui.topup.TopUpMobileViewModel
 import com.rtchubs.pharmaerp.ui.topup.TopUpPinViewModel
+import com.rtchubs.pharmaerp.ui.tou.TouViewModel
 import com.rtchubs.pharmaerp.ui.transactions.TransactionDetailsViewModel
 import com.rtchubs.pharmaerp.ui.transactions.TransactionsViewModel
+import com.rtchubs.pharmaerp.ui.video_play.LoadWebViewViewModel
+import com.rtchubs.pharmaerp.ui.video_play.VideoPlayViewModel
 import com.rtchubs.pharmaerp.ui.wallet.WalletViewModel
 import dagger.Binds
 import dagger.Module
@@ -309,11 +308,6 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(TopUpBankCardViewModel::class)
     abstract fun bindTopUpBankCardViewModel(viewModel: TopUpBankCardViewModel): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(ARLocationViewModel::class)
-    abstract fun bindARLocationViewModel(viewModel: ARLocationViewModel): ViewModel
 
     @Binds
     @IntoMap

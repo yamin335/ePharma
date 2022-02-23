@@ -1,6 +1,5 @@
 package com.rtchubs.pharmaerp.di
 
-import com.rtchubs.pharmaerp.ar_location.ARLocationFragment
 import com.rtchubs.pharmaerp.nid_scan.NIDScanCameraXFragment
 import com.rtchubs.pharmaerp.ui.add_payment_methods.AddBankFragment
 import com.rtchubs.pharmaerp.ui.add_payment_methods.AddCardFragment
@@ -23,18 +22,6 @@ import com.rtchubs.pharmaerp.ui.home.*
 import com.rtchubs.pharmaerp.ui.how_works.HowWorksFragment
 import com.rtchubs.pharmaerp.ui.info.InfoFragment
 import com.rtchubs.pharmaerp.ui.login.SignInFragment
-import com.rtchubs.pharmaerp.ui.terms_and_conditions.TermsAndConditionsFragment
-import com.rtchubs.pharmaerp.ui.tou.TouFragment
-import com.rtchubs.pharmaerp.ui.otp.OtpFragment
-import com.rtchubs.pharmaerp.ui.pre_on_boarding.PreOnBoardingFragment
-import com.rtchubs.pharmaerp.ui.profiles.ProfilesFragment
-import com.rtchubs.pharmaerp.ui.registration.RegistrationFragment
-import com.rtchubs.pharmaerp.ui.settings.SettingsFragment
-import com.rtchubs.pharmaerp.ui.setup.SetupFragment
-import com.rtchubs.pharmaerp.ui.setup_complete.SetupCompleteFragment
-import com.rtchubs.pharmaerp.ui.splash.SplashFragment
-import com.rtchubs.pharmaerp.ui.video_play.LoadWebViewFragment
-import com.rtchubs.pharmaerp.ui.video_play.VideoPlayFragment
 import com.rtchubs.pharmaerp.ui.login.ViewPagerFragment
 import com.rtchubs.pharmaerp.ui.more.MoreFragment
 import com.rtchubs.pharmaerp.ui.mpos.CreateMPOSOrderFragment
@@ -47,23 +34,35 @@ import com.rtchubs.pharmaerp.ui.offers.OffersFragment
 import com.rtchubs.pharmaerp.ui.order.CreateOrderFragment
 import com.rtchubs.pharmaerp.ui.order.OrderListFragment
 import com.rtchubs.pharmaerp.ui.order.OrderTrackHistoryFragment
+import com.rtchubs.pharmaerp.ui.otp.OtpFragment
 import com.rtchubs.pharmaerp.ui.otp_signin.OtpSignInFragment
 import com.rtchubs.pharmaerp.ui.pin_number.PinNumberFragment
+import com.rtchubs.pharmaerp.ui.pre_on_boarding.PreOnBoardingFragment
 import com.rtchubs.pharmaerp.ui.products.SelectProductFragment
 import com.rtchubs.pharmaerp.ui.profile_signin.ProfileSignInFragment
+import com.rtchubs.pharmaerp.ui.profiles.ProfilesFragment
 import com.rtchubs.pharmaerp.ui.purchase_list.ProductPurchaseFragment
+import com.rtchubs.pharmaerp.ui.registration.RegistrationFragment
+import com.rtchubs.pharmaerp.ui.settings.SettingsFragment
+import com.rtchubs.pharmaerp.ui.setup.SetupFragment
+import com.rtchubs.pharmaerp.ui.setup_complete.SetupCompleteFragment
 import com.rtchubs.pharmaerp.ui.shops.ShopDetailsContactUsFragment
 import com.rtchubs.pharmaerp.ui.shops.ShopDetailsFragment
 import com.rtchubs.pharmaerp.ui.shops.ShopDetailsProductListFragment
+import com.rtchubs.pharmaerp.ui.splash.SplashFragment
 import com.rtchubs.pharmaerp.ui.stock_product.ReceiveProductFragment
 import com.rtchubs.pharmaerp.ui.stock_product.StockProductsDetailsFragment
 import com.rtchubs.pharmaerp.ui.stock_product.StockProductsFragment
+import com.rtchubs.pharmaerp.ui.terms_and_conditions.TermsAndConditionsFragment
 import com.rtchubs.pharmaerp.ui.topup.TopUpAmountFragment
 import com.rtchubs.pharmaerp.ui.topup.TopUpBankCardFragment
 import com.rtchubs.pharmaerp.ui.topup.TopUpMobileFragment
 import com.rtchubs.pharmaerp.ui.topup.TopUpPinFragment
+import com.rtchubs.pharmaerp.ui.tou.TouFragment
 import com.rtchubs.pharmaerp.ui.transactions.TransactionDetailsFragment
 import com.rtchubs.pharmaerp.ui.transactions.TransactionsFragment
+import com.rtchubs.pharmaerp.ui.video_play.LoadWebViewFragment
+import com.rtchubs.pharmaerp.ui.video_play.VideoPlayFragment
 import com.rtchubs.pharmaerp.ui.wallet.WalletFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -207,9 +206,6 @@ abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun contributeTopUpBankCardFragment(): TopUpBankCardFragment
-
-    @ContributesAndroidInjector
-    abstract fun contributeARLocationFragment(): ARLocationFragment
 
     @ContributesAndroidInjector
     abstract fun contributeAddProductFragment(): AddProductFragment

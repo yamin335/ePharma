@@ -92,7 +92,6 @@ class MainActivity :
         R.id.otpSignInFragment,
         R.id.pinNumberFragment,
         R.id.profileSignInFragment,
-        R.id.ARLocationFragment,
         R.id.addProductFragment,
         R.id.addCustomerFragment,
         R.id.createOrderFragment,
